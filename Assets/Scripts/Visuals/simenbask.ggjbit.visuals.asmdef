@@ -1,0 +1,18 @@
+{
+    "name": "simenbsk",
+    "rootNamespace": "simenbask.GGJBit.Visuals",
+    "references": [
+        "GUID:554fd7e74a963c742944f69bb5445c10",
+        "GUID:583e5e299deb3dd44896f12e5028bb3b",
+        "GUID:3c87893ed4e68fc4590c80e37c361266"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

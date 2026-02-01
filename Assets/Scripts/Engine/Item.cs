@@ -18,7 +18,7 @@ namespace simenbask.GGJBit.Engine
         [SerializeField]
         private DoorItemClick _doorClick;
 
-        private void Start()
+        private void OnEnable()
         {
             _bitDisplay = BitDisplayManager.BitDisplayPool.Get();
             _bitDisplay.Initialize(BitItem);
@@ -29,6 +29,7 @@ namespace simenbask.GGJBit.Engine
         private void OnDisable()
         {
             BitDisplayManager.BitDisplayPool.Release(_bitDisplay);
+            BitItem.OnBecomeDoor -= BecomeDoor;
         }
 
         private void BecomeDoor(bool door)

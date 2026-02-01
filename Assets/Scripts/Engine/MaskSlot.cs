@@ -49,6 +49,7 @@ namespace simenbask.GGJBit.Engine
                 return;
 
             PlacedItem.OnPlaced -= RemovePlaced;
+            PlacedItem.Placed(false);
             PlacedItem.GetComponent<FollowTransform>().SetTransform(null);
             if (PlacedItem.transform.position.y < LowestYWhenDropped)
                 PlacedItem.transform.position = new Vector3(

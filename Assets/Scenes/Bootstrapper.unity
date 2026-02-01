@@ -2607,6 +2607,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be41ea37134fdb24cbf37863a0c18327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: simenbask.ggjbit.engine::simenbask.GGJBit.Engine.DragManager
+  _lens:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 20020e840e7d07041a5b4ec389fde185, type: 2}
   _dragDistance:
     UseConstant: 0
     ConstantValue: 0

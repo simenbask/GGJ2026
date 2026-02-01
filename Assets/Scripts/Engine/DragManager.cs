@@ -10,6 +10,9 @@ namespace simenbask.GGJBit.Engine
     public class DragManager : MonoBehaviour
     {
         [SerializeField]
+        private Reference<bool> _lens;
+
+        [SerializeField]
         private Reference<float> _dragDistance, _dragVelocity, _dragDamping;
 
         [SerializeField]
@@ -21,6 +24,16 @@ namespace simenbask.GGJBit.Engine
         private Vector2 _screenPosition;
 
         private BitItem _dragging;
+
+        private void OnEnable()
+        {
+            _lens.RegisterListener(ReleaseOnLens);
+        }
+
+        private void OnDisable()
+        {
+            _lens.UnregisterListener(ReleaseOnLens);
+        }
 
         private void Start()
         {
@@ -62,12 +75,26 @@ namespace simenbask.GGJBit.Engine
 
         private void Press(InputAction.CallbackContext context)
         {
+            if (_lens.Value)
+                return;
+
             RaycastHit2D hit = Physics2D.Raycast(GlobalManager.Camera.ScreenToWorldPoint(_screenPosition), Vector2.zero, 150f, _dragLayers);
 
             if (hit)
                 _dragging = hit.rigidbody.GetComponent<BitItem>();
             if (_dragging != null)
                 _dragging.Drag(true);
+        }
+
+        private void ReleaseOnLens(bool active)
+        {
+            if (!active)
+                return;
+            if (_dragging == null)
+                return;
+
+            _dragging.Drag(false);
+            _dragging = null;
         }
 
         private void Release(InputAction.CallbackContext context)

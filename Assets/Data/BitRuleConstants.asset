@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fae9cc43b65604a85551473a1bbbe6, type: 3}
+  m_Name: BitRuleConstants
+  m_EditorClassIdentifier: simenbask.ggjbit.Bits::simenbask.GGJBit.Bits.BitRuleConstants
+  DefaultLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  EtherealLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  UILayer:
+    serializedVersion: 2
+    m_Bits: 32
+  DefaultMaterial: {fileID: 6200000, guid: 081d55c555f79494493bfa868c23c895, type: 2}
+  SlipperyMaterial: {fileID: 6200000, guid: edc590b11db11d7458bc4c608cec652c, type: 2}

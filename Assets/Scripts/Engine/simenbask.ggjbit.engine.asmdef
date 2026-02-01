@@ -1,0 +1,20 @@
+{
+    "name": "simenbask.ggjbit.engine",
+    "rootNamespace": "simenbask.GGJBit.Engine",
+    "references": [
+        "GUID:3c87893ed4e68fc4590c80e37c361266",
+        "GUID:9e8c946601b3ea64e9efd33c20968c29",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:583e5e299deb3dd44896f12e5028bb3b",
+        "GUID:aa8f098d46130fb47b2fc677ede59cb7"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
